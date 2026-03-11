@@ -4,6 +4,7 @@ import '../../../../core/values/colors.dart';
 import '../../../../core/utils/currency_formatter.dart';
 import '../controllers/home_controller.dart';
 import 'widgets/dompet_card.dart';
+import '../../../../global_widgets/custom_bottom_nav_bar.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -38,8 +39,7 @@ class HomeView extends GetView<HomeController> {
               ],
             ),
           ),
-          _buildFloatingActionButton(),
-          _buildBottomNavBar(),
+          const CustomBottomNavBar(currentIndex: 0),
         ],
       ),
     );
@@ -90,6 +90,31 @@ class HomeView extends GetView<HomeController> {
                       fontWeight: FontWeight.w600,
                       fontSize: 14,
                     ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 24,
+                  vertical: 12,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(24),
+                ),
+                elevation: 0,
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: const [
+                  Icon(Icons.add_circle_outline, size: 20),
+                  SizedBox(width: 8),
+                  Text(
+                    'Atur Pendapatan',
+                    style: TextStyle(fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
@@ -170,84 +195,6 @@ class HomeView extends GetView<HomeController> {
           ),
         ],
       ),
-    );
-  }
-
-  Widget _buildFloatingActionButton() {
-    return Positioned(
-      bottom: 80, // Above bottom nav
-      left: 0,
-      right: 0,
-      child: Center(
-        child: Container(
-          width: 300,
-          height: 56,
-          decoration: BoxDecoration(
-            boxShadow: [
-              BoxShadow(
-                color: AppColors.primary.withOpacity(0.3),
-                blurRadius: 15,
-                offset: const Offset(0, 5),
-              ),
-            ],
-          ),
-          child: ElevatedButton(
-            onPressed: () {},
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(Icons.add, size: 24),
-                SizedBox(width: 8),
-                Text('Tambah Pendapatan', style: TextStyle(fontSize: 16)),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildBottomNavBar() {
-    // Basic bottom nav mock
-    return Positioned(
-      bottom: 0,
-      left: 0,
-      right: 0,
-      child: Container(
-        height: 70,
-        decoration: BoxDecoration(
-          color: AppColors.white,
-          border: Border(top: BorderSide(color: Colors.grey.withOpacity(0.2))),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            _navItem(Icons.home, 'Beranda', true),
-            _navItem(Icons.account_balance_wallet, 'Dompet', false),
-            _navItem(Icons.pie_chart, 'Laporan', false),
-            _navItem(Icons.person, 'Profil', false),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _navItem(IconData icon, String label, bool isActive) {
-    final color = isActive ? AppColors.primary : AppColors.textSecondary;
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(icon, color: color),
-        const SizedBox(height: 4),
-        Text(
-          label,
-          style: TextStyle(
-            color: color,
-            fontSize: 12,
-            fontWeight: isActive ? FontWeight.w600 : FontWeight.normal,
-          ),
-        ),
-      ],
     );
   }
 }
