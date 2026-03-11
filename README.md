@@ -47,6 +47,8 @@ lib/
 │   ├── bindings/         # Global Dependency Injection
 │   ├── data/             # Models, Providers, Repositories, Services
 │   ├── modules/          # Screens (Feature-First: UI + Controllers + Bindings)
+│   │   ├── dompet/       # Wallet features (View, Detail, Settings)
+│   │   ├── home/         # Dashboard / Home Screen
 │   └── routes/           # Route Definitions and Page Mapping
 ├── core/                 # Core Application Components
 │   ├── theme/            # Central Theme (AppTheme)

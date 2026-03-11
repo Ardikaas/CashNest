@@ -294,7 +294,7 @@ class DompetDetailView extends GetView<DompetDetailController> {
             decoration: BoxDecoration(
               color: isIncome
                   ? AppColors.badgeGreenBg
-                  : Colors.red.withOpacity(0.1),
+                  : Colors.red.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
             child: Icon(

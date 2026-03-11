@@ -139,7 +139,7 @@ class DompetSettingsView extends GetView<DompetSettingsController> {
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: TextStyle(
-              color: AppColors.textSecondary.withOpacity(0.5),
+              color: AppColors.textSecondary.withValues(alpha: 0.5),
             ),
             prefixIcon: Icon(icon, color: AppColors.primary, size: 20),
             filled: true,

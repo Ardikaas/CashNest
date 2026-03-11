@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'CashNest',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: AppPages.INITIAL,
+      initialRoute: AppPages.initial,
       getPages: AppPages.routes,
     );
   }

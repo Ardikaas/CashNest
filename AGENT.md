@@ -48,7 +48,8 @@ When designing the backend or data models, keep these primary entities in mind:
 ### 3.3 Dashboard / Overview
 
 * **Total Balance Overview**: Shows the total accumulated wealth across all accounts.
-* **Dompet View**: A section showing the user how much money is currently sitting in each virtual purpose wallet.
+* **Dompet View**: A section showing the user how much money is currently sitting in each virtual purpose wallet. From here, users can navigate to the **Dompet Detail** to see the transaction history (e.g. Income, Withdrawals).
+* **Dompet Settings**: A sub-page from Dompet Detail where users can configure specific details for that wallet, such as the associated Bank Name, Account Number, and Monthly Admin Fees.
 * **Rekening View**: A section showing the actual real-world location of the money (Bank accounts balances).
 
 ### 3.4 (Pending) Future Features
