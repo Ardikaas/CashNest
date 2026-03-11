@@ -5,31 +5,31 @@ import '../modules/dompet/bindings/dompet_binding.dart';
 import '../modules/dompet/views/dompet_view.dart';
 import '../modules/dompet/bindings/dompet_detail_binding.dart';
 import '../modules/dompet/views/dompet_detail_view.dart';
-import '../modules/dompet_settings/bindings/dompet_settings_binding.dart';
-import '../modules/dompet_settings/views/dompet_settings_view.dart';
+import '../modules/dompet/bindings/dompet_settings_binding.dart';
+import '../modules/dompet/views/dompet_settings_view.dart';
 import 'app_routes.dart';
 
 class AppPages {
-  static const INITIAL = Routes.HOME;
+  static const initial = Routes.home;
 
   static final routes = [
     GetPage(
-      name: Routes.HOME,
+      name: Routes.home,
       page: () => const HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
-      name: Routes.DOMPET,
+      name: Routes.dompet,
       page: () => const DompetView(),
       binding: DompetBinding(),
     ),
     GetPage(
-      name: Routes.DOMPET_DETAIL,
+      name: Routes.dompetDetail,
       page: () => const DompetDetailView(),
       binding: DompetDetailBinding(),
     ),
     GetPage(
-      name: Routes.DOMPET_SETTINGS,
+      name: Routes.dompetSettings,
       page: () => const DompetSettingsView(),
       binding: DompetSettingsBinding(),
     ),

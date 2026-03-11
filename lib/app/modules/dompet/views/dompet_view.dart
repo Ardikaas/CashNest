@@ -34,7 +34,7 @@ class DompetView extends GetView<DompetController> {
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
-                      color: AppColors.primaryBg.withOpacity(0.7),
+                      color: AppColors.primaryBg.withValues(alpha: 0.7),
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: Row(
@@ -113,10 +113,10 @@ class DompetView extends GetView<DompetController> {
   Widget _buildAddWalletButton() {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.primaryBg.withOpacity(0.3),
+        color: AppColors.primaryBg.withValues(alpha: 0.3),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: AppColors.primary.withOpacity(0.3),
+          color: AppColors.primary.withValues(alpha: 0.3),
           style:
               BorderStyle.none, // Can use dotted border package later if needed
           width: 1,

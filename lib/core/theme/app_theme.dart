@@ -10,8 +10,8 @@ class AppTheme {
       primaryColor: AppColors.primary,
       colorScheme: const ColorScheme.light(
         primary: AppColors.primary,
-        background: AppColors.background,
-        onBackground: AppColors.textPrimary,
+        surface: AppColors.background,
+        onSurface: AppColors.textPrimary,
       ),
       textTheme: GoogleFonts.plusJakartaSansTextTheme().copyWith(
         displayLarge: GoogleFonts.plusJakartaSans(

@@ -16,6 +16,10 @@ lib/
 │   │   ├── repositories/  # Repositories abstracting the data sources (API vs Local DB)
 │   │   └── services/      # Local background services (SharedPreferences, GetStorage, SQLite)
 │   ├── modules/         # UI & Logic layer (Organized by features/screens)
+│   │   ├── dompet/
+│   │   │   ├── bindings/
+│   │   │   ├── controllers/
+│   │   │   └── views/        # Contains DompetView, DompetDetailView, and DompetSettingsView
 │   │   ├── home/
 │   │   │   ├── bindings/     # HomeBinding (Injects HomeController)
 │   │   │   ├── controllers/  # HomeController (State & Logic)

@@ -18,13 +18,15 @@ class CustomBottomNavBar extends StatelessWidget {
         height: 70,
         decoration: BoxDecoration(
           color: AppColors.white,
-          border: Border(top: BorderSide(color: Colors.grey.withOpacity(0.2))),
+          border: Border(
+            top: BorderSide(color: Colors.grey.withValues(alpha: 0.2)),
+          ),
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _navItem(Icons.home, 'Beranda', 0, Routes.HOME),
-            _navItem(Icons.account_balance_wallet, 'Dompet', 1, Routes.DOMPET),
+            _navItem(Icons.home, 'Beranda', 0, Routes.home),
+            _navItem(Icons.account_balance_wallet, 'Dompet', 1, Routes.dompet),
             _navItem(Icons.pie_chart, 'Laporan', 2, ''),
             _navItem(Icons.person, 'Profil', 3, ''),
           ],
